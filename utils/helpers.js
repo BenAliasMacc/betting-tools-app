@@ -44,12 +44,31 @@ async function copyToClipboard(text) {
 
         await navigator.clipboard.writeText(text);
 
-        alert("✅ Résultat copié !");
+        showToast("✅ Résultat copié !");
 
     } catch (error) {
 
-        alert("❌ Impossible de copier.");
+        showToast("❌ Impossible de copier.");
 
     }
+
+}
+
+function showToast(message) {
+
+    const toast = document.createElement("div");
+
+    toast.className = "toast";
+
+    toast.innerText = message;
+
+    document.body.appendChild(toast);
+
+
+    setTimeout(() => {
+
+        toast.remove();
+
+    }, 2500);
 
 }
