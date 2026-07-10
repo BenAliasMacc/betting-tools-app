@@ -42,18 +42,17 @@ header {
 
     text-align: center;
 
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 
 }
 
-
 header h1 {
 
-    font-size: 36px;
+    font-size: 28px;
 
     margin: 0;
 
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 
 }
 
@@ -65,36 +64,38 @@ header h1 {
 
 nav {
 
-    display: flex;
+    display:flex;
 
-    gap: 12px;
+    gap:6px;
 
-    justify-content: center;
+    justify-content:center;
 
-    margin-bottom: 35px;
+    margin-bottom:20px;
 
-    flex-wrap: wrap;
+    width:100%;
 
 }
 
 
 .tab {
 
-    padding: 12px 22px;
+    flex:1;
 
-    border: none;
+    padding:10px 6px;
 
-    border-radius: 12px;
+    border:none;
 
-    cursor: pointer;
+    border-radius:10px;
 
-    background: #242424;
+    cursor:pointer;
 
-    color: white;
+    background:#2b2b2b;
 
-    font-size: 16px;
+    color:white;
 
-    transition: 0.2s;
+    font-size:14px;
+
+    white-space:nowrap;
 
 }
 
@@ -136,7 +137,7 @@ nav {
 
     background: rgba(30,30,30,0.9);
 
-    padding: 30px;
+    padding: 20px;
 
     border-radius: 20px;
 
@@ -154,7 +155,7 @@ label {
 
     display: block;
 
-    margin-bottom: 18px;
+    margin-bottom: 10px;
 
     font-size: 15px;
 
@@ -167,7 +168,7 @@ input {
 
     width: 100%;
 
-    padding: 12px;
+    padding: 10px;
 
     margin-top: 8px;
 
@@ -201,10 +202,21 @@ input:focus {
 .button-group {
 
     display: flex;
+    gap: 8px;
+    margin-top: 18px;
 
-    gap: 10px;
+}
 
-    margin-top: 25px;
+.btn-primary {
+
+    flex: 5;
+
+}
+
+.btn-secondary,
+.btn-copy {
+
+    flex: 1;
 
 }
 
@@ -294,7 +306,7 @@ input:focus {
 
 .result-box strong {
 
-    font-size: 28px;
+    font-size: 22px;
 
     color: #2f80ed;
 
@@ -318,36 +330,85 @@ input:focus {
 ========================= */
 
 
-@media(max-width:600px) {
+@media (max-width:600px){
 
+    .app{
 
-    .app {
-
-        padding: 20px 12px;
-
-    }
-
-
-    header h1 {
-
-        font-size: 28px;
+        padding:14px;
 
     }
 
+    header{
 
-    .button-group {
-
-        flex-direction: column;
-
-    }
-
-
-    .btn {
-
-        width: 100%;
+        margin-bottom:12px;
 
     }
 
+    header h1{
+
+        font-size:24px;
+
+    }
+
+    nav{
+
+        gap:6px;
+
+        margin-bottom:16px;
+
+    }
+
+    .tab{
+
+        flex:1;
+
+        font-size:13px;
+
+        padding:9px 6px;
+
+    }
+
+    .calculator{
+
+        padding:16px;
+
+    }
+
+    label{
+
+        margin-bottom:8px;
+
+        font-size:14px;
+
+    }
+
+    input{
+
+        padding:9px;
+
+        font-size:15px;
+
+    }
+
+    .button-group{
+
+        gap:6px;
+
+    }
+
+    .result-box{
+
+        padding:18px;
+
+        font-size:16px;
+
+    }
+
+    .result-box strong{
+
+        font-size:16px;
+
+    }
 
 }
 
