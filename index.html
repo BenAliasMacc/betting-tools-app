@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Betting Tools</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header>
+
+            <h1>Betting Tools</h1>
+
+        </header>
+
+        <nav>
+
+            <button class="tab active" data-tab="combo">
+                ⚽ Combo buteur
+            </button>
+
+            <button class="tab" data-tab="exclusif">
+                🎯 Combo exclusif
+            </button>
+
+            <button class="tab" data-tab="kelly">
+                📈 Kelly
+            </button>
+
+        </nav>
+
+        <main id="content">
+
+        <div id="combo" class="tab-content">
+
+            <h2>⚽ Combo buteur</h2>
+
+            <div class="calculator">
+
+                <label>
+                    Cote 1
+                    <input type="number" id="odd1" placeholder="Ex: 2.50">
+                </label>
+
+                <label>
+                    Cote 2
+                    <input type="number" id="odd2" placeholder="Ex: 3.00">
+                </label>
+
+                <label>
+                    Cote 3 (optionnel)
+                    <input type="number" id="odd3" placeholder="Ex: 4.00">
+                </label>
+
+                <label>
+                    Cote 4 (optionnel)
+                    <input type="number" id="odd4" placeholder="Ex: 5.00">
+                </label>
+
+
+                <div class="button-group">
+
+                    <button id="calculateCombo">
+                        Calculer
+                    </button>
+
+                    <button id="clearCombo" type="button">
+                        Effacer
+                    </button>
+
+                    <button id="copyCombo" type="button">
+                        Copier
+                    </button>
+
+                </div>
+
+                <div id="result"></div>
+
+            </div>
+
+        </div>
+
+
+        <div id="exclusif" class="tab-content hidden">
+
+
+            <h2>🎯 Combo exclusif</h2>
+
+
+            <div class="calculator">
+
+
+                <label>
+                Cote 1
+
+                <input 
+                type="number" 
+                id="exclusive1" 
+                placeholder="Ex: 8.50">
+
+                </label>
+
+
+                <label>
+                Cote 2
+
+                <input 
+                type="number" 
+                id="exclusive2" 
+                placeholder="Ex: 12.00">
+
+                </label>
+
+
+                <label>
+                Cote 3 (optionnel)
+
+                <input 
+                type="number" 
+                id="exclusive3" 
+                placeholder="Ex: 20.00">
+
+                </label>
+
+
+                <label>
+                Cote 4 (optionnel)
+
+                <input 
+                type="number" 
+                id="exclusive4" 
+                placeholder="Ex: 30.00">
+
+                </label>
+
+                <div class="button-group">
+
+                    <button id="calculateExclusive">
+                        Calculer
+                    </button>
+
+                    <button id="clearExclusive" type="button">
+                        Effacer
+                    </button>
+
+                        <button id="copyExclusive" type="button">
+                            Copier
+                        </button>
+
+                </div>
+
+                <div id="exclusiveResult"></div>
+
+            </div>
+
+        </div>
+
+        <div id="kelly" class="tab-content hidden">
+
+
+            <h2>📈 Kelly Calculator</h2>
+
+
+            <div class="calculator">
+
+
+                <label>
+                Cote bookmaker
+
+                    <input 
+                        type="number" 
+                        id="kellyBook" 
+                        placeholder="Ex: 2.50">
+
+                </label>
+
+                <label>
+                Fair odds
+
+                    <input 
+                    type="number" 
+                    id="kellySharp" 
+                    placeholder="Ex: 2.20">
+
+                </label>
+
+                <div class="button-group">
+
+                    <button id="calculateKelly">
+                        Calculer
+                    </button>
+
+                    <button id="clearKelly" type="button">
+                        Effacer
+                    </button>
+
+                    <button id="copyKelly" type="button">
+                        Copier
+                    </button>
+
+                </div>
+
+                <div id="kellyResult"></div>
+
+            </div>
+
+        </div>
+
+        </main>
+
+    </div>
+
+    <script src="calculators/combo.js"></script>
+    <script src="calculators/kelly.js"></script>
+    <script src="calculators/exclusif.js"></script>
+    <script src="utils/helpers.js"></script>
+    <script src="script.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
