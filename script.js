@@ -1,5 +1,9 @@
 const button = document.getElementById("calculateCombo");
 
+document.getElementById("result").style.display = "none";
+document.getElementById("exclusiveResult").style.display = "none";
+document.getElementById("kellyResult").style.display = "none";
+
 // =====================
 // TEXTES À COPIER
 // =====================
@@ -84,6 +88,10 @@ button.addEventListener("click", () => {
 
     `;
 
+    document.getElementById("result").style.display = "block";
+
+    console.log("AFFICHAGE RESULT OK");
+
 });
 
 document.getElementById("clearCombo").addEventListener("click", () => {
@@ -94,6 +102,8 @@ document.getElementById("clearCombo").addEventListener("click", () => {
     );
 
     comboCopyText = "";
+
+    document.getElementById("result").style.display = "none";
 
 });
 
@@ -212,7 +222,11 @@ kellyButton.addEventListener("click", () => {
     Kelly /2 : ${(result.half * 100).toFixed(2)} %
     Kelly /3 : ${(result.third * 100).toFixed(2)} %
     Kelly /4 : ${(result.quarter * 100).toFixed(2)} %
-    Kelly /6 : ${(result.sixth * 100).toFixed(2)} %`;
+    Kelly /6 : ${(result.sixth * 100).toFixed(2)} %`
+    
+    ;
+
+    document.getElementById("kellyResult").style.display = "block";
 
 });
 
@@ -224,6 +238,8 @@ document.getElementById("clearKelly").addEventListener("click", () => {
     );
 
     kellyCopyText = "";
+
+    document.getElementById("result").style.display = "none";
 
 });
 
@@ -320,6 +336,8 @@ exclusiveButton.addEventListener("click", () => {
 
     `;
 
+    document.getElementById("exclusiveResult").style.display = "block";
+
 });
 
 document.getElementById("clearExclusive").addEventListener("click", () => {
@@ -335,6 +353,8 @@ document.getElementById("clearExclusive").addEventListener("click", () => {
     );
 
     exclusiveCopyText = "";
+
+    document.getElementById("result").style.display = "none";
 
 });
 

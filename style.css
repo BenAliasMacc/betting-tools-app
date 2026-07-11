@@ -440,17 +440,13 @@ input:focus {
 
     .result-box {
 
+        display:none;
+
         padding:14px;
 
         margin-top:15px;
 
         font-size:14px;
-
-    }
-
-    .result-box:empty {
-
-        display:none;
 
     }
 
